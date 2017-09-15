@@ -8,14 +8,13 @@ class Water extends React.Component {
     super(props);
     this.waterPlant = this.waterPlant.bind(this);
     this.state = {
-      timeWatered: 0,
+      timeWatered: []
     }
   }
 
   waterPlant(timeWatered) {
-    this.setState({
-      timeWatered: moment().format("MM/DD/YYYY")
-    });
+    var newTimeWatered = new Date().toLocaleString();
+    this.setState({timeWatered: newTimeWatered});
   }
 
   render() {
@@ -27,6 +26,5 @@ class Water extends React.Component {
     )
   }
 }
-
 
 export default Water;

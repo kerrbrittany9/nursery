@@ -13,7 +13,6 @@ function CatalogList(props){
             key={index}/>
           )}
       </h3>
-      <hr/>
     </div>
   );
 }
