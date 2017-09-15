@@ -13,9 +13,9 @@ class AddPlant extends React.Component {
     event.preventDefault()
     const { _name, _water } = this.refs;
     var newPlant = new Plant(_name.value, _water.value);
+    console.log(newPlant);
     this.props.addNewPlant(newPlant);
     this.props.hideFormAfterSubmission();
-    console.log(newPlant.name);
   }
 
   render(){
@@ -41,8 +41,7 @@ class AddPlant extends React.Component {
 
 AddPlant.propTypes = {
   addNewPlant: PropTypes.func,
-  hideFormAfterSubmission: PropTypes.func,
-
+  hideFormAfterSubmission: PropTypes.func
 }
 
 export default AddPlant;
