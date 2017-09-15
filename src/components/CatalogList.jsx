@@ -9,7 +9,6 @@ function CatalogList(props){
       <h3>{props.plants.map((plant, index) =>
           <PlantDetail
             name={plant.name}
-            timeSinceWatered={plant.timeSinceWatered}
             water={plant.water}
             key={index}/>
           )}

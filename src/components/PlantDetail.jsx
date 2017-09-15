@@ -7,8 +7,8 @@ function PlantDetail(props) {
     <div>
       <h3>Plant Type: {props.name}</h3>
       <h4>Watering care: {props.water}</h4>
-      <h5>Time Since Entered Store: {props.timeSinceWatered}</h5>
       <Water/>
+      <hr/>
     </div>
   )
 }
@@ -16,7 +16,7 @@ function PlantDetail(props) {
 PlantDetail.propTypes = {
   name: PropTypes.string,
   water: PropTypes.string,
-  timeSinceWatered: PropTypes.string
+  timeWatered: PropTypes.instanceOf(Date)
 }
 
 export default PlantDetail;

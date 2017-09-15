@@ -4,12 +4,7 @@ class Plant {
   constructor(name, water) {
     this.name = name;
     this.water = water;
-    this.timeWatered= new Moment();
-    this.timeSinceWatered = this.setTimeSinceWatered();
-  }
-
-  setTimeSinceWatered() {
-    this.timeSinceWatered = this.timeWatered.fromNow(true);
+    this.timeWatered = new Date();
   }
 
 }

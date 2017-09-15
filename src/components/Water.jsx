@@ -3,29 +3,30 @@ import PropTypes from "prop-types";
 import Moment from "moment";
 
 class Water extends React.Component {
+
   constructor(props) {
     super(props);
     this.waterPlant = this.waterPlant.bind(this);
     this.state = {
-      water: 0,
+      timeWatered: 0,
     }
   }
 
   waterPlant(timeWatered) {
-    let now = new Moment(new Date());
-    let then = new Moment(timeWatered);
-    let stringTime = then.from(now, true);
-    return stringTime
+    this.setState({
+      timeWatered: moment().format("MM/DD/YYYY")
+    });
   }
 
   render() {
     return (
       <div>
         <button onClick={this.waterPlant}>Water</button>
-        <p>Watered: {this.state.water}</p>
+        <h5>Watered: {this.state.timeWatered}</h5>
       </div>
     )
-  };
+  }
 }
+
 
 export default Water;
