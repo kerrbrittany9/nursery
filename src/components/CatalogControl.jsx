@@ -1,5 +1,6 @@
 import React from "react";
 import AddPlant from "./AddPlant";
+import PropTypes from "prop-types";
 
 class CatalogControl extends React.Component {
 
@@ -37,7 +38,7 @@ class CatalogControl extends React.Component {
 }
 
 CatalogControl.propTypes = {
-  addNewPlant: PropTypes.func,
+  addNewPlant: PropTypes.func
 }
 
 export default CatalogControl;

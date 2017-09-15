@@ -1,5 +1,5 @@
 import React from "react";
-import CatalogControl from "./CatalogControl";
+import Catalog from "./CatalogControl";
 
 function App(props){
   return (
