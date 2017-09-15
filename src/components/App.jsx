@@ -3,8 +3,9 @@ import React from "react";
 function App(props){
   return (
     <div>
-      <h3></h3>
-      <p><em></em></p>
+      <h3>Pistils Nursery</h3>
+      <p><em>Oregon's Specialty Plant Shop and Mercantile</em></p>
+  
     </div>
   );
 }
