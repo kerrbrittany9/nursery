@@ -12,6 +12,5 @@ class Plant {
     this.timeSinceWatered = this.timeWatered.fromNow(true);
   }
 
-
 }
 export default Plant;

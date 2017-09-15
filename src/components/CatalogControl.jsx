@@ -23,7 +23,7 @@ class CatalogControl extends React.Component {
     const formVisibleOnPage = this.state.formVisibleOnPage;
     let formAreaContent = null;
     if (this.state.formVisibleOnPage) {
-      formAreaContent = <AddPlant addNewPlant={this.props.addNewPlant}
+      formAreaContent = <AddPlant addNewPlant = {this.props.addNewPlant}
       hideFormAfterSubmission = {this.hideForm}/>
     } else {
       formAreaContent = <button onClick={this.showForm.bind(this)}>Add Plant</button>;
