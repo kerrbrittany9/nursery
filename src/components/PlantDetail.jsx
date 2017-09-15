@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Water from "./Water";
 
 function PlantDetail(props) {
+
   return (
     <div>
       <h3>Plant Type: {props.name}</h3>

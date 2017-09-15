@@ -9,10 +9,10 @@ This web app is a practice in React.js and moment. It is a mock nursery admin pa
 ![Home](src/assets/img/home.png)
 Users can pretend to own a garden shop like Pistils Nursery in Portland!
 
-![Add a Plant](src/assets/img/addplant.png)
+![Add a Plant](src/assets/img/plants.png)
 Users can add plants by type to their inventory.
 
-![Keeping Track](src/assets/img/waterplant.png)
+![Keeping Track](src/assets/img/water.png)
 Users click a button each time they water their plant to give it a timestamp and keep track.
 
 
