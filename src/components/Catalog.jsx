@@ -25,6 +25,7 @@ class Catalog extends React.Component {
   render() {
     return (
       <div>
+        <h3><em>Catalog</em></h3>
         <CatalogControl
           addNewPlant = {this.addNewPlant}/>
         <CatalogList
