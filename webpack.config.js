@@ -54,7 +54,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Build Template',
+      title: 'Nursery',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

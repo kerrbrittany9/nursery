@@ -3,8 +3,8 @@ import React from "react";
 function App(props){
   return (
     <div>
-      <h3>Get to Coding!</h3>
-      <p><em>Template provided by The Dylan Lewis</em></p>
+      <h3></h3>
+      <p><em></em></p>
     </div>
   );
 }
