@@ -1,7 +1,7 @@
 import React from "react";
 import CatalogControl from "./CatalogControl";
 import AddPlant from "./AddPlant";
-import PropTypes from "./prop-types";
+import PropTypes from "prop-types";
 import CatalogList from "./CatalogList";
 
 class Catalog extends React.Component {
@@ -23,7 +23,6 @@ class Catalog extends React.Component {
     let newMasterCatalog = this.state.masterCatalog.slice();
     newMasterCatalog.push(newPlant);
     this.setState({masterCatalog: newMasterCatalog});
-    console.log(this.state.masterCatalog);
   }
 
 
@@ -33,18 +32,19 @@ class Catalog extends React.Component {
       plant.setTimeSinceWatered()
     );
     this.setState({masterCatalog: newMasterCatalog});
-
+}
 
   render() {
     return (
       <div>
-        <CatalogControl addNewPlant = {this.addNewPlant}/>
-          <CatalogList
+        <CatalogControl
+          addNewPlant = {this.addNewPlant}/>
+        <CatalogList
           plants={this.state.masterCatalog}/>
       </div>
     )
-  }
-};
+  };
+}
 
 Catalog.propTypes = {
   addNewPlant: PropTypes.func

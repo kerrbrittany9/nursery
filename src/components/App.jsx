@@ -1,8 +1,8 @@
 import React from "react";
-import Catalog from "./CatalogControl";
+import Catalog from "./Catalog";
 
 
-function App(props){
+function App(){
   return (
     <div>
       <h3>Pistils Nursery</h3>
