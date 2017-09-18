@@ -1,36 +1,47 @@
 import React from "react";
 import AddPlant from "./AddPlant";
 import PropTypes from "prop-types";
+import { Modal } from "react-bootstrap";
 
 class CatalogControl extends React.Component {
 
   constructor(props) {
     super(props);
-    this.showForm = this.showForm.bind(this);
-    this.hideForm = this.hideForm.bind(this);
-    this.state = {formVisibleOnPage: false};
+    this.showFormModal  = this.showFormModal.bind(this);
+    this.hideFormModal = this.hideFormModal.bind(this);
+    this.state = {formModalIsShowing: false};
   }
 
-  showForm() {
-    this.setState({formVisibleOnPage: true});
+  showFormModal(event) {
+    this.setState({formModalIsShowing: true
+    });
   }
 
-  hideForm() {
-    this.setState({formVisibleOnPage: false});
+  hideFormModal(event) {
+    this.setState({formModalIsShowing: false
+    });
   }
 
   render(){
-    const formVisibleOnPage = this.state.formVisibleOnPage;
-    let formAreaContent = null;
-    if (this.state.formVisibleOnPage) {
-      formAreaContent = <AddPlant addNewPlant = {this.props.addNewPlant}
-      hideFormAfterSubmission = {this.hideForm}/>
-    } else {
-      formAreaContent = <button onClick={this.showForm.bind(this)}>Add Plant</button>;
-    }
     return (
       <div>
-        {formAreaContent}
+        <button onClick={this.showFormModal}>
+          Add Plant</button>
+        <Modal
+          show={this.state.formModalIsShowing}
+          onHide={this.hideFormModal}
+          bsSize="large">
+          <Modal.Header>
+              <Modal.Title>New Plant</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+               <AddPlant
+                addNewPlant={this.props.addNewPlant}
+                hideFormAfterSubmission = {this.hideFormModal}/>
+              <br/>
+              <img src="http://pistilsnursery.com/wp-content/uploads/2017/07/Brooklyn-Botanic-Gardens-Conservatory-featured.jpg"/>
+             </Modal.Body>
+           </Modal>
       </div>
 
     );
